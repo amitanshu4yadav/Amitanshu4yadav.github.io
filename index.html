@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amitanshu Yadav — Independent Full-Stack Developer & Founder</title>
+<meta name="description" content="Amitanshu Yadav is an independent full-stack developer and founder based in India, building PrimeZ IDE, PrimezSite, Vogle, Veyrano and Bazaar Mart — solo, from scratch, on shared hosting.">
+<meta name="keywords" content="Amitanshu Yadav, full stack developer India, PHP developer, PrimeZ IDE, PrimezSite, Vogle, indie hacker India, solo founder developer portfolio">
+<meta name="author" content="Amitanshu Yadav">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://amitanshuyadav.dev/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amitanshu Yadav — Independent Full-Stack Developer & Founder">
+<meta property="og:description" content="Solo builder shipping PrimeZ IDE, PrimezSite, Vogle, Veyrano and Bazaar Mart from India.">
+<meta property="og:url" content="https://amitanshuyadav.dev/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Amitanshu Yadav — Independent Full-Stack Developer & Founder">
+<meta name="twitter:description" content="Solo builder shipping PrimeZ IDE, PrimezSite, Vogle, Veyrano and Bazaar Mart from India.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Amitanshu Yadav",
+  "jobTitle": "Independent Full-Stack Developer & Founder",
+  "url": "https://amitanshuyadav.dev/",
+  "email": "mailto:amitanshu4yadav@gmail.com",
+  "knowsAbout": ["PHP", "MySQL", "Electron", "JavaScript", "Node.js", "Software Architecture"],
+  "nationality": "Indian"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#050505;
+    --panel:#0B0B0C;
+    --panel-2:#111113;
+    --line: rgba(255,255,255,0.09);
+    --line-soft: rgba(255,255,255,0.05);
+    --white:#F6F5F2;
+    --dim:#8C8C8F;
+    --dim-2:#57575B;
+    --violet:#B79CFF;
+    --peach:#FF9E6D;
+    --font-display:'Inter Tight', 'Inter', sans-serif;
+    --font-body:'Inter', -apple-system, sans-serif;
+    --font-serif:'Instrument Serif', serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:var(--font-body);
+    line-height:1.6;
+    overflow-x:hidden;
+    position:relative;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+  a{color:inherit; text-decoration:none;}
+  ::selection{background:var(--white); color:#000;}
+  :focus-visible{outline:1.5px solid var(--white); outline-offset:4px;}
+  em{font-family:var(--font-serif); font-style:italic; color:var(--white); font-weight:400;}
+
+  /* film grain overlay for a hand-made, non-generated feel */
+  .grain{
+    position:fixed; inset:0; z-index:60; pointer-events:none; opacity:0.045; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px; position:relative; z-index:1;}
+
+  /* ---------- NAV ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter: blur(14px);
+    background:rgba(5,5,5,0.6);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{
+    max-width:1120px; margin:0 auto; padding:22px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{font-family:var(--font-display); font-weight:700; font-size:1rem; letter-spacing:-0.01em;}
+  nav.links{display:flex; gap:36px; font-size:0.86rem;}
+  nav.links a{color:var(--dim); transition:color .25s;}
+  nav.links a:hover{color:var(--white);}
+  .nav-cta{
+    font-size:0.82rem; font-weight:600; color:#000; background:var(--white);
+    padding:10px 20px; border-radius:100px;
+    transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s;
+  }
+  .nav-cta:hover{transform:translateY(-1px); box-shadow:0 8px 24px -6px rgba(255,255,255,0.25);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:120px 0 100px; position:relative; min-height:80vh;
+    display:flex; align-items:center;
+  }
+  .hero-inner{position:relative; z-index:2; max-width:760px;}
+  .blob-wrap{
+    position:absolute; top:-8%; right:-14%; width:640px; height:640px; z-index:0;
+    filter:blur(0.5px);
+  }
+  @media (max-width:900px){ .blob-wrap{ opacity:0.5; right:-40%; top:0; } }
+
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:9px;
+    font-size:0.8rem; color:var(--dim); letter-spacing:0.01em; margin-bottom:28px;
+    border:1px solid var(--line); padding:7px 14px 7px 10px; border-radius:100px;
+  }
+  .eyebrow .pip{width:6px; height:6px; border-radius:50%; background:linear-gradient(135deg,var(--violet),var(--peach));}
+
+  h1.name{
+    font-family:var(--font-display); font-weight:700;
+    font-size:clamp(2.8rem, 6.4vw, 5.2rem);
+    line-height:1.0; letter-spacing:-0.03em; margin-bottom:26px;
+  }
+  .role-line{
+    font-size:1.15rem; color:var(--dim); margin-bottom:30px; max-width:520px;
+    font-weight:400;
+  }
+  .role-line b{color:var(--white); font-weight:600;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    font-size:0.9rem; font-weight:600; padding:15px 28px; border-radius:100px;
+    transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s, background .25s, color .25s;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-primary{background:var(--white); color:#000;}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 32px -10px rgba(255,255,255,0.3);}
+  .btn-ghost{border:1px solid var(--line); color:var(--white);}
+  .btn-ghost:hover{border-color:rgba(255,255,255,0.4); background:rgba(255,255,255,0.04);}
+
+  .scroll-cue{
+    position:absolute; bottom:0; left:32px; display:flex; align-items:center; gap:10px;
+    font-size:0.76rem; color:var(--dim-2); text-transform:uppercase; letter-spacing:0.12em;
+  }
+  .scroll-cue .line{width:1px; height:34px; background:linear-gradient(var(--dim-2), transparent); animation:scrollcue 2s ease-in-out infinite;}
+  @keyframes scrollcue{0%,100%{opacity:0.3;} 50%{opacity:1;}}
+
+  /* ---------- SECTION LABELS ---------- */
+  .section{padding:130px 0;}
+  .section.tight{padding-top:0;}
+  .sec-head{display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-bottom:64px; flex-wrap:wrap;}
+  .sec-tag{font-size:0.8rem; color:var(--dim-2); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:14px;}
+  .sec-title{font-family:var(--font-display); font-size:clamp(1.9rem,3.6vw,2.7rem); font-weight:700; letter-spacing:-0.02em; max-width:560px;}
+  .sec-sub{color:var(--dim); max-width:340px; font-size:0.96rem; padding-bottom:6px;}
+
+  /* ---------- PROJECTS ---------- */
+  .projects-list{display:flex; flex-direction:column;}
+  .proj-row{
+    display:grid; grid-template-columns:80px 1.4fr 1fr auto; align-items:center; gap:32px;
+    padding:34px 0; border-top:1px solid var(--line-soft);
+    position:relative; transition:padding-left .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .proj-row:last-child{border-bottom:1px solid var(--line-soft);}
+  .proj-row::before{
+    content:""; position:absolute; inset:0; z-index:0; border-radius:16px; opacity:0;
+    background:linear-gradient(100deg, rgba(183,156,255,0.07), rgba(255,158,109,0.05));
+    transition:opacity .35s;
+  }
+  .proj-row:hover{padding-left:18px;}
+  .proj-row:hover::before{opacity:1;}
+  .proj-index{font-family:var(--font-serif); font-size:1.6rem; color:var(--dim-2); font-style:italic; position:relative; z-index:1;}
+  .proj-main{position:relative; z-index:1;}
+  .proj-main h3{font-family:var(--font-display); font-size:1.4rem; font-weight:600; margin-bottom:8px; letter-spacing:-0.01em;}
+  .proj-main p{color:var(--dim); font-size:0.92rem; max-width:420px;}
+  .proj-tags{display:flex; flex-wrap:wrap; gap:8px; position:relative; z-index:1;}
+  .tag{font-size:0.72rem; color:var(--dim); border:1px solid var(--line); padding:5px 11px; border-radius:100px; white-space:nowrap;}
+  .proj-link{
+    position:relative; z-index:1; width:42px; height:42px; border-radius:50%; border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    transition:background .3s, border-color .3s, transform .3s;
+  }
+  .proj-row:hover .proj-link{background:var(--white); border-color:var(--white); transform:rotate(45deg);}
+  .proj-link svg{stroke:var(--white); transition:stroke .3s;}
+  .proj-row:hover .proj-link svg{stroke:#000;}
+  @media (max-width:760px){
+    .proj-row{grid-template-columns:40px 1fr; row-gap:14px;}
+    .proj-tags, .proj-link{grid-column:2; }
+  }
+
+  /* ---------- STACK ---------- */
+  .stack-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:20px; overflow:hidden;}
+  @media (max-width:760px){.stack-grid{grid-template-columns:1fr;}}
+  .stack-cell{background:var(--panel); padding:34px 30px;}
+  .stack-cell h4{font-family:var(--font-display); font-size:0.98rem; font-weight:600; margin-bottom:16px; color:var(--dim);}
+  .stack-cell ul{list-style:none;}
+  .stack-cell li{font-size:1.02rem; padding:6px 0; color:var(--white); font-weight:500;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid; grid-template-columns:1.2fr 0.8fr; gap:80px; align-items:start;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr; gap:50px;}}
+  .about-text p{color:var(--dim); margin-bottom:20px; font-size:1.08rem; line-height:1.75;}
+  .about-text p:first-child{font-size:1.3rem; color:var(--white); line-height:1.55; font-weight:400;}
+  .stat-block{display:grid; gap:0; border-top:1px solid var(--line-soft);}
+  .stat{padding:26px 0; border-bottom:1px solid var(--line-soft); display:flex; align-items:baseline; justify-content:space-between; gap:20px;}
+  .stat-num{font-family:var(--font-serif); font-size:2.6rem; font-style:italic; font-weight:400;}
+  .stat-label{font-size:0.85rem; color:var(--dim); text-align:right; max-width:160px;}
+
+  /* ---------- CONTACT ---------- */
+  .contact-panel{
+    position:relative; overflow:hidden;
+    background:var(--panel); border:1px solid var(--line); border-radius:28px;
+    padding:80px 40px; text-align:center;
+  }
+  .contact-panel .sec-title{margin:0 auto 16px; }
+  .contact-panel p{color:var(--dim); max-width:440px; margin:0 auto 36px; font-size:1.02rem;}
+  .contact-links{display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position:relative; z-index:1;}
+
+  footer{padding:44px 0; border-top:1px solid var(--line-soft); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;}
+  footer p{font-size:0.82rem; color:var(--dim-2);}
+  footer .fx{display:flex; gap:22px; font-size:0.82rem;}
+  footer .fx a{color:var(--dim); transition:color .2s;}
+  footer .fx a:hover{color:var(--white);}
+
+  .reveal{opacity:0; transform:translateY(26px); transition:opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1);}
+  .reveal.in{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">Amitanshu Yadav</a>
+    <nav class="links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="blob-wrap" aria-hidden="true">
+      <svg viewBox="0 0 600 600" width="100%" height="100%">
+        <defs>
+          <radialGradient id="g1" cx="35%" cy="30%" r="75%">
+            <stop offset="0%" stop-color="#B79CFF" stop-opacity="0.85"/>
+            <stop offset="45%" stop-color="#8B7CFF" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="g2" cx="65%" cy="70%" r="70%">
+            <stop offset="0%" stop-color="#FF9E6D" stop-opacity="0.8"/>
+            <stop offset="50%" stop-color="#FF7A5C" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#050505" stop-opacity="0"/>
+          </radialGradient>
+          <filter id="blur1"><feGaussianBlur stdDeviation="38"/></filter>
+        </defs>
+        <g id="blobGroup" filter="url(#blur1)">
+          <circle cx="230" cy="230" r="190" fill="url(#g1)"/>
+          <circle cx="370" cy="360" r="170" fill="url(#g2)"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <p class="eyebrow"><span class="pip"></span>Open for freelance &amp; collaboration</p>
+      <h1 class="name">Building software<br>like it's the <em>only</em><br>thing that matters.</h1>
+      <p class="role-line">I'm <b>Amitanshu Yadav</b> — an independent full-stack developer and founder in India, designing and shipping complete products alone: backend, database, interface, and the SEO that gets them found.</p>
+      <div class="hero-ctas">
+        <a href="#work" class="btn btn-primary">See the work</a>
+        <a href="mailto:amitanshu4yadav@gmail.com" class="btn btn-ghost">amitanshu4yadav@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true"><span class="line"></span>Scroll</div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-tag">Selected work</p>
+          <h2 class="sec-title">Six products, built and deployed by one person.</h2>
+        </div>
+        <p class="sec-sub">Architecture, interface, and infrastructure — all mine, end to end.</p>
+      </div>
+
+      <div class="projects-list reveal">
+
+        <div class="proj-row">
+          <span class="proj-index">01</span>
+          <div class="proj-main">
+            <h3>PrimeZ IDE</h3>
+            <p>A native Windows code editor built with Electron — a real xterm.js terminal, a custom <code>.primEz</code> project format, and a proper installer.</p>
+          </div>
+          <div class="proj-tags"><span class="tag">Electron</span><span class="tag">xterm.js</span><span class="tag">Node.js</span></div>
+          <a href="#contact" class="proj-link" aria-label="Ask about PrimeZ IDE"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+
+        <div class="proj-row">
+          <span class="proj-index">02</span>
+          <div class="proj-main">
+            <h3>PrimezSite</h3>
+            <p>An educational blog for Indian students — redesigned article pages, structured-data SEO, reader Q&amp;A, and a full custom admin panel.</p>
+          </div>
+          <div class="proj-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">SEO</span></div>
+          <a href="https://primezsite.infinityfree.me" target="_blank" rel="noopener" class="proj-link" aria-label="Visit PrimezSite"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+
+        <div class="proj-row">
+          <span class="proj-index">03</span>
+          <div class="proj-main">
+            <h3>Vogle</h3>
+            <p>A video search engine with a Google-style results page, a self-built crawler with no API key, typo-tolerant ranking, and an AI overview box.</p>
+          </div>
+          <div class="proj-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Search</span></div>
+          <a href="#contact" class="proj-link" aria-label="Ask about Vogle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+
+        <div class="proj-row">
+          <span class="proj-index">04</span>
+          <div class="proj-main">
+            <h3>Veyrano</h3>
+            <p>A real-time messenger shipped twice — a polling-based PHP build for shared hosting, and a Socket.IO build for capable hosts.</p>
+          </div>
+          <div class="proj-tags"><span class="tag">PHP</span><span class="tag">Socket.IO</span></div>
+          <a href="#contact" class="proj-link" aria-label="Ask about Veyrano"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+
+        <div class="proj-row">
+          <span class="proj-index">05</span>
+          <div class="proj-main">
+            <h3>Bazaar Mart</h3>
+            <p>A multi-role cash-on-delivery e-commerce platform — customer, seller and admin flows on a single PHP/MySQLi codebase.</p>
+          </div>
+          <div class="proj-tags"><span class="tag">PHP</span><span class="tag">MySQLi</span></div>
+          <a href="#contact" class="proj-link" aria-label="Ask about Bazaar Mart"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+
+        <div class="proj-row">
+          <span class="proj-index">06</span>
+          <div class="proj-main">
+            <h3>axionLabs</h3>
+            <p>A landing site for an AI research lab brand — waitlist capture, cookie consent, and a lightweight admin panel.</p>
+          </div>
+          <div class="proj-tags"><span class="tag">PHP</span><span class="tag">Brand site</span></div>
+          <a href="#contact" class="proj-link" aria-label="Ask about axionLabs"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section tight" id="stack">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-tag">Toolbox</p>
+          <h2 class="sec-title">What I build with.</h2>
+        </div>
+        <p class="sec-sub">Mostly constrained to shared hosting — which teaches you exactly what a stack can do.</p>
+      </div>
+
+      <div class="stack-grid reveal">
+        <div class="stack-cell">
+          <h4>Backend</h4>
+          <ul><li>PHP</li><li>MySQL / MySQLi</li><li>Node.js</li><li>Socket.IO</li></ul>
+        </div>
+        <div class="stack-cell">
+          <h4>Frontend</h4>
+          <ul><li>JavaScript</li><li>HTML &amp; CSS</li><li>Electron</li><li>xterm.js</li></ul>
+        </div>
+        <div class="stack-cell">
+          <h4>Infra &amp; growth</h4>
+          <ul><li>InfinityFree hosting</li><li>Technical SEO</li><li>Structured data</li><li>Playwright + ffmpeg</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <p class="sec-tag">About</p>
+          <h2 class="sec-title">Solo, by design.</h2>
+        </div>
+      </div>
+
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>I work alone across every layer of a product — because I'd rather ship something complete than hand off something half-built.</p>
+          <p>Most of my work runs on <b>InfinityFree shared hosting</b>, which sounds like a limitation until you treat it as a constraint worth designing around: no prepared statements, no persistent connections, no shortcuts. It forces cleaner decisions.</p>
+          <p>My products are built for <b>Indian students and everyday consumers</b> — but held to a bar set by the interfaces they already trust: Google, Flipkart, WhatsApp, X. Premium shouldn't require a big team.</p>
+        </div>
+        <div class="stat-block">
+          <div class="stat"><span class="stat-num">6</span><span class="stat-label">Products designed, built &amp; shipped solo</span></div>
+          <div class="stat"><span class="stat-num">1</span><span class="stat-label">Person across backend, UI &amp; SEO</span></div>
+          <div class="stat"><span class="stat-num">0</span><span class="stat-label">Dedicated servers — shared hosting only</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-panel reveal">
+        <h2 class="sec-title">Let's build<br>something.</h2>
+        <p>Open to freelance work, collaborations, and interesting problems. Reach out directly — I read everything myself.</p>
+        <div class="contact-links">
+          <a href="mailto:amitanshu4yadav@gmail.com" class="btn btn-primary">amitanshu4yadav@gmail.com</a>
+          <a href="mailto:primezsite@atomicmail.io" class="btn btn-ghost">primezsite@atomicmail.io</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>© 2026 Amitanshu Yadav — built solo, end to end.</p>
+  <div class="fx">
+    <a href="mailto:amitanshu4yadav@gmail.com">Email</a>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script>
+  // gentle floating parallax on the hero blob
+  (function(){
+    const blob = document.getElementById('blobGroup');
+    if(!blob) return;
+    let t = 0;
+    function animate(){
+      t += 0.006;
+      const dx = Math.sin(t) * 10;
+      const dy = Math.cos(t * 0.8) * 10;
+      blob.setAttribute('transform', `translate(${dx},${dy})`);
+      requestAnimationFrame(animate);
+    }
+    if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      requestAnimationFrame(animate);
+    }
+  })();
+
+  // scroll reveal
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add('in'); observer.unobserve(entry.target); }
+    });
+  }, { threshold:0.12 });
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
